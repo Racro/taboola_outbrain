@@ -61,9 +61,14 @@ const MAX_IDLE_PASSES    = 2;
   }
 
   const output = Object.values(allAds).slice(0, MAX_ADS);
-  fs.writeFileSync(`data/${domain}.json`, JSON.stringify(output, null, 2));
-  console.log(`✅ Saved ${output.length} ads → 
-    data/${domain}.json`);
+  if (output.length > 0){
+    fs.writeFileSync(`data/${domain}.json`, JSON.stringify(output, null, 2));
+    console.log(`✅ Saved ${output.length} ads → 
+      data/${domain}.json`);
+  } else {
+    console.log('0 ads found');
+  }
+
 
   /* ─── screenshots ───────────────────────────────────── */
   for (const ad of output) {
