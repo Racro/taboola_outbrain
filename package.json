@@ -1,0 +1,17 @@
+{
+  "name": "taboola_outbrain",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "ad-scraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "puppeteer": "^24.7.2",
+    "xvfb": "^0.4.0"
+  }
+}
